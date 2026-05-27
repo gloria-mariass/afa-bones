@@ -1,0 +1,49 @@
+<div id="default-carousel" class="relative w-full max-w-5xl mx-auto px-4">
+    <div id="carousel-content" class="relative min-h-[450px] overflow-hidden rounded-lg">
+        <!-- Esqueleto do novo card (Animate Pulse) -->
+        <div class="h-full flex items-center px-12 animate-pulse">
+            <div
+                class="flex flex-col-reverse md:flex-row w-full min-h-[450px] bg-white/5 rounded-2xl border border-white/5 overflow-hidden">
+                <!-- Lado Esquerdo: Placeholder do Texto -->
+                <div class="w-full md:w-1/2 p-6 md:p-10 flex flex-col justify-center relative">
+                    <!-- Placeholder Logo e Arroba -->
+                    <div class="flex items-center gap-2 mb-4 md:absolute md:top-6 md:left-10">
+                        <div class="w-5 h-5 rounded-full bg-white/10"></div>
+                        <div class="h-2 w-20 bg-white/10 rounded"></div>
+                    </div>
+
+                    <!-- Placeholder Título -->
+                    <div class="h-8 w-3/4 bg-white/10 rounded mb-4 mt-2 md:mt-8"></div>
+
+                    <!-- Placeholder Descrição (Linhas) -->
+                    <div class="space-y-3">
+                        <div class="h-3 w-full bg-white/5 rounded"></div>
+                        <div class="h-3 w-5/6 bg-white/5 rounded"></div>
+                        <div class="h-3 w-4/6 bg-white/5 rounded"></div>
+                    </div>
+                </div>
+
+                <!-- Lado Direito: Placeholder da Imagem -->
+                <div class="w-full md:w-1/2 h-[250px] md:h-auto bg-white/10"></div>
+            </div>
+        </div>
+    </div>
+
+    <button type="button"
+        class="absolute top-1/2 -translate-y-1/2 start-4 z-30 flex items-center justify-center w-10 h-10 rounded-full bg-white/30 hover:bg-white/50 !focus:ring-4 !focus:ring-white !md:focus:ring-0 !md:focus:outline-none cursor-pointer"
+        data-carousel-prev aria-label="Slide anterior">
+        <svg class="w-4 h-4 text-white" fill="none" viewBox="0 0 6 10">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M5 1 1 5l4 4" />
+        </svg>
+    </button>
+
+    <button type="button"
+        class="absolute top-1/2 -translate-y-1/2 end-4 z-30 flex items-center justify-center w-10 h-10 rounded-full bg-white/30 hover:bg-white/50 !focus:ring-4 !focus:ring-white !md:focus:ring-0 !md:focus:outline-none cursor-pointer"
+        data-carousel-next aria-label="Próximo slide">
+        <svg class="w-4 h-4 text-white" fill="none" viewBox="0 0 6 10">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="m1 9 4-4-4-4" />
+        </svg>
+    </button>
+</div>

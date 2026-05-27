@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@theme {
+  --color-industrial-black: #222222;
+  --color-steel-mist: #c0c2c4;
+  --color-fusion-orange: #f2691b;
+  --color-graphite-stone: #3a3a3a;
+  --color-pure-white: #ffffff;
+
+  --color-brand: var(--color-fusion-orange);
+  --color-heading: var(--color-industrial-black);
+  --color-body-text: var(--color-pure-white);
+  --color-surface: var(--color-steel-mist);
+}
+
+/* Cores Blindadas */
+.bg-verde-site {
+  background-color: #84cc16 !important;
+}
+.bg-verde-hover {
+  background-color: #65a30d !important;
+}
+
+/* Animação: 1s de pulso + 4s de pausa = 5s total */
+@keyframes pulso-externo {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  20% {
+    transform: scale(1.3);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.3);
+    opacity: 0;
+  }
+}
+
+.anima-pulso {
+  animation: pulso-externo 5s ease-out infinite !important;
+}
+
+/* Esconde a pulsação no hover para focar no brilho */
+.group:hover .anima-pulso {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.marquee-inner {
+  /* Ajuste os 30s para mais ou para menos para alterar a velocidade */
+  animation: marqueeScroll 30s linear infinite;
+}
+/* Pausa a animação quando o mouse passa por cima do container */
+.marquee-wrapper:hover .marquee-inner {
+  animation-play-state: paused;
+}
+@keyframes marqueeScroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
