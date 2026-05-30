@@ -1,0 +1,32 @@
+[
+    {
+        "titulo": "Boné Trucker Tela",
+        "quantidade_minima": 30,
+        "imagem": "src/img/bone.jpg",
+        "beneficios": ["Confortável", "Leve", "Ventilado"]
+    },
+    {
+        "titulo": "Ecobag Personalizada",
+        "quantidade_minima": 50,
+        "imagem": "src/img/sacola.jpg",
+        "beneficios": ["Resistente", "Ecológica", "Espaçosa"]
+    },
+    {
+        "titulo": "Boné Aba Reta",
+        "quantidade_minima": 30,
+        "imagem": "src/img/bone.jpg",
+        "beneficios": ["Estiloso", "Moderno", "Ajustável"]
+    },
+    {
+        "titulo": "Copo Personalizado",
+        "quantidade_minima": 50,
+        "imagem": "src/img/copo.jpg",
+        "beneficios": ["Térmico", "Durável", "Exclusivo"]
+    },
+    {
+        "titulo": "Boné Esportivo",
+        "quantidade_minima": 30,
+        "imagem": "src/img/bone.jpg",
+        "beneficios": ["Secagem Rápida", "Respirável", "Ajuste Perfeito"]
+    }
+]

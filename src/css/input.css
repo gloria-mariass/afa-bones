@@ -1,25 +1,25 @@
 @import "tailwindcss";
 
 @theme {
-  --color-industrial-black: #222222;
-  --color-steel-mist: #c0c2c4;
-  --color-fusion-orange: #f2691b;
-  --color-graphite-stone: #3a3a3a;
+  /* Cores Base da Identidade Visual */
+  --color-afa-red: #ff0000;
+  --color-afa-dark-red: #cc0000;
+  --color-afa-black: #1a1a1a;
+  --color-charcoal-gray: #4b5563;
+  --color-light-gray: #f3f4f6;
   --color-pure-white: #ffffff;
+  --color-border-gray: #e5e7eb;
 
-  --color-brand: var(--color-fusion-orange);
-  --color-heading: var(--color-industrial-black);
-  --color-body-text: var(--color-pure-white);
-  --color-surface: var(--color-steel-mist);
+  /* Mapeamento Semântico para o Layout */
+  --color-brand: var(--color-afa-red);
+  --color-brand-hover: var(--color-afa-dark-red);
+  --color-heading: var(--color-afa-black);
+  --color-body-text: var(--color-charcoal-gray);
+  --color-surface: var(--color-pure-white);
+  --color-background: var(--color-light-gray);
+  --color-border: var(--color-border-gray);
 }
 
-/* Cores Blindadas */
-.bg-verde-site {
-  background-color: #84cc16 !important;
-}
-.bg-verde-hover {
-  background-color: #65a30d !important;
-}
 
 /* Animação: 1s de pulso + 4s de pausa = 5s total */
 @keyframes pulso-externo {

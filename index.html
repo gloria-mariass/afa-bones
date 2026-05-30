@@ -1,162 +1,224 @@
 <!doctype html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title data-text="nomeEmpresa">Sua Empresa</title>
-    <link rel="icon" href="/favicon.png" />
 
-    <!-- Subindo via vite -->
-    <link rel="stylesheet" href="./src/css/input.css" />
-    <!-- Subindo à mão -->
-    <link rel="stylesheet" href="./src/css/output.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-text="nomeEmpresa">Sua Empresa</title>
+  <link rel="icon" href="/favicon.png" />
 
-      <script type="module" src="/src/js/dadosSite.js"></script>
-      <script type="module" src="/src/js/binder.js"></script>
-      <script type="module" src="/src/js/faqService.js"></script>
-      <script type="module" src="/src/js/reviewsService.js"></script>
-      <script type="module" src="/src/js/loadCarrossel.js"></script>
-  </head>
+  <!-- Subindo via vite -->
+  <link rel="stylesheet" href="./src/css/input.css" />
+  <!-- Subindo à mão -->
+  <link rel="stylesheet" href="./src/css/output.css" />
 
-  <body class="min-h-screen relative">
+  <script type="module" src="/src/js/dadosSite.js"></script>
+  <script type="module" src="/src/js/binder.js"></script>
+  <script type="module" src="/src/js/faqService.js"></script>
+  <script type="module" src="/src/js/reviewsService.js"></script>
+  <script type="module" src="/src/js/loadCarrossel.js"></script>
+</head>
 
-    <!-- Botão de contato -->
-    <a
-      data-href="whatsappLink"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Chamar no WhatsApp"
-      class="fixed bottom-5 right-5 md:bottom-8 md:right-8 z-50 flex items-center transition-all duration-300 hover:scale-105 hover:-translate-y-1 focus:outline-none group"
-    >
-      <div
-        class="overflow-hidden flex items-center transition-all duration-500 ease-in-out max-w-0 group-hover:max-w-[320px]"
-      >
-        <span
-          class="whitespace-nowrap pl-5 pr-10 py-2.5 text-sm font-semibold tracking-wide text-white rounded-full border-2 border-[#25D366] bg-[#19ad50] shadow-lg shadow-[#25D366]/30 group-hover:bg-[#1EBE5D] group-hover:border-[#1EBE5D] transition-colors duration-300 relative z-0"
-        >
-          ORÇAMENTO PERSONALIZADO
-        </span>
+<body class="min-h-screen relative">
+
+  <section class="relative w-full h-screen flex items-center overflow-hidden">
+    <!-- Vídeo de fundo escurecido -->
+    <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0 brightness-40">
+      <source src="src/img/banner.mp4" type="video/mp4" />
+    </video>
+
+    <div class="relative container mx-auto px-4 flex items-center justify-start h-full min-h-72 md:min-h-screen z-10">
+      <div class="max-w-2xl mt-16 md:mt-0 md:pt-20 lg:pt-0">
+
+        <!-- Avisos Redondos (Badges) -->
+        <div class="flex flex-wrap gap-3 mb-6">
+          <!-- Badge Cinza -->
+          <span
+            class="inline-flex items-center bg-charcoal-gray text-pure-white px-4 py-1.5 rounded-full text-sm font-semibold">
+            +de 15000 pedidos fechados
+          </span>
+
+          <!-- Badge Vermelho com Foguinho -->
+          <span
+            class="inline-flex items-center gap-1 bg-afa-red text-pure-white px-4 py-1.5 rounded-full text-sm font-semibold">
+            ofertas exclusivas
+          </span>
+        </div>
+
+        <!-- Título principal com o 'bonés exclusivos' em vermelho -->
+        <h1 class="text-pure-white text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-4">
+          Transformando sua marca em <br> <span class="text-afa-red">bonés exclusivos</span>
+        </h1>
+
+        <!-- Subtítulo -->
+        <p class="text-light-gray text-xl md:text-2xl mb-8">
+          Personalização de alta qualidade. Atendemos empresas de todo o Brasil com excelência.
+        </p>
+
+        <!-- Grupo de Botões -->
+        <div class="flex flex-col sm:flex-row gap-4">
+
+          <!-- Botão WhatsApp em vermelho -->
+          <a href="#"
+            class="inline-block bg-afa-red hover:bg-afa-dark-red text-pure-white font-bold px-8 py-4 rounded-full transition text-lg text-center">
+            Chame no WhatsApp
+          </a>
+
+          <!-- Botão Produtos -->
+          <a href="#"
+            class="inline-block bg-transparent border-2 border-pure-white hover:bg-pure-white hover:text-afa-black text-pure-white font-bold px-8 py-4 rounded-full transition text-lg text-center">
+            Nossos Produtos
+          </a>
+
+        </div>
       </div>
+    </div>
+  </section>
 
+<!-- Seção de Produtos -->
+<section class="py-20 bg-gray-50" id="produtos">
+  <div class="container mx-auto px-4">
+    
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-5xl font-bold text-industrial-black mb-4">Nossos Produtos</h2>
+      <p class="text-gray-600 text-lg">Escolha o modelo ideal para estampar a sua marca</p>
+    </div>
+
+    <div id="produtos-carousel" class="flex md:grid overflow-x-auto md:overflow-visible snap-x snap-mandatory md:snap-none grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto pb-8 md:pb-0 hide-scrollbar pt-4">
+      
+      </div>
+  </div>
+</section>
+
+  <!-- Botão de contato -->
+  <a data-href="whatsappLink" target="_blank" rel="noopener noreferrer" aria-label="Chamar no WhatsApp"
+    class="fixed bottom-5 right-5 md:bottom-8 md:right-8 z-50 flex items-center transition-all duration-300 hover:scale-105 hover:-translate-y-1 focus:outline-none group">
+    <div
+      class="overflow-hidden flex items-center transition-all duration-500 ease-in-out max-w-0 group-hover:max-w-[320px]">
       <span
-        class="relative z-10 -ml-8 flex h-14 w-14 shrink-0 items-center justify-center rounded-full border-2 border-[#25D366] bg-[#19ad50] shadow-lg shadow-[#25D366]/40 group-hover:bg-[#1EBE5D] group-hover:border-[#1EBE5D] transition-colors duration-300"
-      >
-        <img
-          src="src/svg/whatsapp-social-media-svgrepo-com.svg"
-          alt="WhatsApp"
-          class="h-7 w-7 transition-transform duration-300 group-hover:scale-125 relative z-10"
-        />
+        class="whitespace-nowrap pl-5 pr-10 py-2.5 text-sm font-semibold tracking-wide text-white rounded-full border-2 border-[#25D366] bg-[#19ad50] shadow-lg shadow-[#25D366]/30 group-hover:bg-[#1EBE5D] group-hover:border-[#1EBE5D] transition-colors duration-300 relative z-0">
+        ORÇAMENTO PERSONALIZADO
       </span>
-    </a>
+    </div>
 
-    <!-- Rodapé -->
-    <footer class="pt-8 border-t border-white/10 bg-industrial-black text-steel-mist">
-      <div class="max-w-screen-xl mx-auto mt-8 px-6 sm:px-8 lg:px-16 pt-12 lg:pt-16">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div>
-            <div class="flex items-center gap-3 mb-2">
-              <div class="h-18 w-46 bg-brand"
-                style="-webkit-mask: url('/src/img/logo_branca.png') top left / contain no-repeat; mask: url('/src/img/logo_branca.png') top left / contain no-repeat;">
+    <span
+      class="relative z-10 -ml-8 flex h-14 w-14 shrink-0 items-center justify-center rounded-full border-2 border-[#25D366] bg-[#19ad50] shadow-lg shadow-[#25D366]/40 group-hover:bg-[#1EBE5D] group-hover:border-[#1EBE5D] transition-colors duration-300">
+      <img src="src/svg/whatsapp-social-media-svgrepo-com.svg" alt="WhatsApp"
+        class="h-7 w-7 transition-transform duration-300 group-hover:scale-125 relative z-10" />
+    </span>
+  </a>
+
+  <!-- Rodapé -->
+  <footer class="pt-8 border-t border-white/10 bg-charcoal-gray/10 text-steel-mist">
+    <div class="max-w-screen-xl mx-auto mt-8 px-6 sm:px-8 lg:px-16 pt-12 lg:pt-16">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div>
+          <div class="flex items-center gap-3 mb-2">
+            <div class="h-18 w-46 bg-brand"
+              style="-webkit-mask: url('/src/img/logo_branca.png') top left / contain no-repeat; mask: url('/src/img/logo_branca.png') top left / contain no-repeat;">
+            </div>
+          </div>
+          <p class="text-sm leading-6 text-steel-mist/75 mb-6">
+            Eleve o nível da sua marca com a <span class="text-brand" data-text="nomeEmpresa">Sua Marca</span>.
+            Entregamos
+            bonés
+            personalizados de alto padrão, feitos sob medida para destacar o seu negócio no mercado e impressionar seus
+            clientes.
+          </p>
+          <div class="flex items-center gap-4">
+            <a data-href="instagramLink" target="_blank" rel="noopener noreferrer"
+              class="hover:text-brand transition-colors">
+              <div class="h-5 w-5 bg-brand opacity-75 hover:opacity-100 transition-opacity"
+                style="-webkit-mask: url('/src/svg/instagram-svgrepo-com.svg') center/contain no-repeat; mask: url('/src/svg/instagram-svgrepo-com.svg') center/contain no-repeat;">
               </div>
-            </div>
-            <p class="text-sm leading-6 text-steel-mist/75 mb-6">
-              Eleve o nível da sua marca com a <span class="text-brand" data-text="nomeEmpresa">Sua Marca</span>. Entregamos
-              bonés
-              personalizados de alto padrão, feitos sob medida para destacar o seu negócio no mercado e impressionar seus
-              clientes.
-            </p>
-            <div class="flex items-center gap-4">
-              <a data-href="instagramLink" target="_blank" rel="noopener noreferrer"
-                class="hover:text-brand transition-colors">
-                <div class="h-5 w-5 bg-brand opacity-75 hover:opacity-100 transition-opacity"
-                  style="-webkit-mask: url('/src/svg/instagram-svgrepo-com.svg') center/contain no-repeat; mask: url('/src/svg/instagram-svgrepo-com.svg') center/contain no-repeat;">
-                </div>
-              </a>
-            </div>
+            </a>
           </div>
-    
-          <div class="md:ml-auto md:max-w-[325px] w-full">
-            <h3 class="text-brand font-semibold text-2xl mb-4">Navegação</h3>
-            <ul class="space-y-3 text-sm text-steel-mist/80">
-              <li>
-                <a href="#home" class="hover:text-white transition-colors">Home</a>
-              </li>
-              <li>
-                <a href="#produtos" class="hover:text-white transition-colors">Nossos Produtos</a>
-              </li>
-              <li>
-                <a href="#processo" class="hover:text-white transition-colors">Etapas do Processo</a>
-              </li>
-              <li>
-                <a href="#instagram" class="hover:text-white transition-colors">Nosso Instagram</a>
-              </li>
-              <li>
-                <a href="#avaliacoes" class="hover:text-white transition-colors">Avaliações</a>
-              </li>
-              <li>
-                <a href="#faq" class="hover:text-white transition-colors">FAQ</a>
-              </li>
-            </ul>
-          </div>
-    
-          <div>
-            <h3 class="text-brand font-semibold text-2xl mb-4">Fale Conosco</h3>
-            <ul class="space-y-4 text-sm text-steel-mist/80">
-              <li>
-                <a data-href="emailLink" target="_blank"
-                  class="group flex items-center gap-1 hover:text-brand transition-colors opacity-75 hover:opacity-100 transition-opacity">
-                  <div class="h-5 w-5 bg-brand transition-transform duration-300 group-hover:scale-125 relative z-10" style="
+        </div>
+
+        <div class="md:ml-auto md:max-w-[325px] w-full">
+          <h3 class="text-brand font-semibold text-2xl mb-4">Navegação</h3>
+          <ul class="space-y-3 text-sm text-steel-mist/80">
+            <li>
+              <a href="#home" class="hover:text-afa-red transition-colors">Home</a>
+            </li>
+            <li>
+              <a href="#produtos" class="hover:text-afa-red transition-colors">Nossos Produtos</a>
+            </li>
+            <li>
+              <a href="#processo" class="hover:text-afa-red transition-colors">Etapas do Processo</a>
+            </li>
+            <li>
+              <a href="#instagram" class="hover:text-afa-red transition-colors">Nosso Instagram</a>
+            </li>
+            <li>
+              <a href="#avaliacoes" class="hover:text-afa-red transition-colors">Avaliações</a>
+            </li>
+            <li>
+              <a href="#faq" class="hover:text-afa-red transition-colors">FAQ</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-brand font-semibold text-2xl mb-4">Fale Conosco</h3>
+          <ul class="space-y-4 text-sm text-steel-mist/80">
+            <li>
+              <a data-href="emailLink" target="_blank"
+                class="group flex items-center gap-1 hover:text-brand transition-colors opacity-75 hover:opacity-100 transition-opacity">
+                <div class="h-5 w-5 bg-brand transition-transform duration-300 group-hover:scale-125 relative z-10"
+                  style="
                           -webkit-mask: url(&quot;src/svg/email-svgrepo-com.svg&quot;)
                             center/contain no-repeat;
                           mask: url(&quot;src/svg/email-svgrepo-com.svg&quot;)
                             center/contain no-repeat;
                         "></div>
-                  <span data-text="email">Carregando...</span>
-                </a>
-              </li>
-              <li class="flex items-start gap-2">
-                <a data-href="whatsappLink" target="_blank"
-                  class="group flex items-center gap-1 hover:text-brand transition-colors opacity-75 hover:opacity-100 transition-opacity">
-                  <div class="h-5 w-4.5 bg-brand transition-transform duration-300 relative z-10" style="
+                <span data-text="email">Carregando...</span>
+              </a>
+            </li>
+            <li class="flex items-start gap-2">
+              <a data-href="whatsappLink" target="_blank"
+                class="group flex items-center gap-1 hover:text-brand transition-colors opacity-75 hover:opacity-100 transition-opacity">
+                <div class="h-5 w-4.5 bg-brand transition-transform duration-300 relative z-10" style="
                           -webkit-mask: url(&quot;src/svg/whatsapp-128-svgrepo-com.svg&quot;)
                             center/contain no-repeat;
                           mask: url(&quot;src/svg/whatsapp-128-svgrepo-com.svg&quot;)
                             center/contain no-repeat;
                         "></div>
-                  <span data-text="whatsappNumero">Carregando...</span>
-                </a>
-              </li>
-              <li class="flex items-start gap-2">
-                <a data-href="linkRotaMaps" target="_blank"
-                  class="group flex items-center gap-1 hover:text-brand transition-colors opacity-75 hover:opacity-100 transition-opacity">
-                  <img src="src/svg/pin-svgrepo-com.svg" alt="Ícone" class="w-5 h-5" />
-                  <span data-text="enderecoEmpresa" class="w-fit">Carregando...</span>
-                </a>
-              </li>
-            </ul>
-          </div>
+                <span data-text="whatsappNumero">Carregando...</span>
+              </a>
+            </li>
+            <li class="flex items-start gap-2">
+              <a data-href="linkRotaMaps" target="_blank"
+                class="group flex items-center gap-1 hover:text-brand transition-colors opacity-75 hover:opacity-100 transition-opacity">
+                <img src="src/svg/pin-svgrepo-com.svg" alt="Ícone" class="w-5 h-5" />
+                <span data-text="enderecoEmpresa" class="w-fit">Carregando...</span>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
-      <div class="mt-16 md:mt-24 border-t opacity-10"></div>
-      <div
-        class="max-w-screen-xl py-8 mx-auto px-6 sm:px-8 lg:px-16 flex flex-col md:flex-row gap-2 items-center justify-between text-sm text-steel-mist/60">
-        <p class="mt-4 md:mt-0 opacity-100">
-          Copyright © 2026 <span data-text="nomeEmpresa">Sua Empresa</span>.
-          Todos os direitos reservados.
-        </p>
-        <p class="mt-4 md:mt-0 opacity-100">
-          <span data-text="nomeEmpresa">Nome da Empresa</span> | CNPJ:
-          <span data-text="cnpj">Carregando...</span>
-        </p>
-        <a data-href="whatsappLinkVinculo"
-          class="flex items-end text-steel-mist/60 hover:text-white transition-colors cursor-pointer">
-          <span class="text-sm">Desenvolvido por</span>
-          <div class="h-5 w-20 bg-white ml-1.5 mb-[1px]"
-            style="-webkit-mask: url('src/img/logo_vinculo.png') center/contain no-repeat; mask: url('src/img/logo_vinculo.png') center/contain no-repeat;">
-          </div>
-        </a>
-      </div>
-    </footer>
-    <script src="src/js/loadCarrossel.js"></script>
-  </body>
+    </div>
+    <div class="mt-16 md:mt-24 border-t opacity-10"></div>
+    <div
+      class="max-w-screen-xl py-8 mx-auto px-6 sm:px-8 lg:px-16 flex flex-col md:flex-row gap-2 items-center justify-between text-sm text-steel-mist/60">
+      <p class="mt-4 md:mt-0 opacity-100">
+        Copyright © 2026 <span data-text="nomeEmpresa">Sua Empresa</span>.
+        Todos os direitos reservados.
+      </p>
+      <p class="mt-4 md:mt-0 opacity-100">
+        <span data-text="nomeEmpresa">Nome da Empresa</span> | CNPJ:
+        <span data-text="cnpj">Carregando...</span>
+      </p>
+      <a data-href="whatsappLinkVinculo"
+        class="flex items-end text-steel-mist/60 hover:text-afa-red transition-colors cursor-pointer">
+        <span class="text-sm">Desenvolvido por</span>
+        <div class="h-5 w-20 bg-afa-red ml-1.5 mb-[1px]"
+          style="-webkit-mask: url('src/img/logo_vinculo.png') center/contain no-repeat; mask: url('src/img/logo_vinculo.png') center/contain no-repeat;">
+        </div>
+      </a>
+    </div>
+  </footer>
+  <script src="src/js/loadCarrossel.js"></script>
+</body>
+
 </html>
