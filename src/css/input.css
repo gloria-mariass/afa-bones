@@ -21,53 +21,19 @@
 }
 
 
-/* Animação: 1s de pulso + 4s de pausa = 5s total */
-@keyframes pulso-externo {
-  0% {
-    transform: scale(1);
-    opacity: 0.8;
+/* Cria o movimento suave de subir, descer e dar uma leve rotacionada */
+  @keyframes flutuar {
+    0% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(2deg); }
+    100% { transform: translateY(0px) rotate(0deg); }
   }
-  20% {
-    transform: scale(1.3);
-    opacity: 0;
+  
+  /* Aplica a animação */
+  .anima-flutuar {
+    animation: flutuar 4s ease-in-out infinite;
   }
-  100% {
-    transform: scale(1.3);
-    opacity: 0;
+  
+  /* A mesma animação, mas com atraso para as duas imagens não balançarem iguais */
+  .anima-flutuar-atraso {
+    animation: flutuar 4s ease-in-out 2s infinite;
   }
-}
-
-.anima-pulso {
-  animation: pulso-externo 5s ease-out infinite !important;
-}
-
-/* Esconde a pulsação no hover para focar no brilho */
-.group:hover .anima-pulso {
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-.hide-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-.hide-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-.marquee-inner {
-  /* Ajuste os 30s para mais ou para menos para alterar a velocidade */
-  animation: marqueeScroll 30s linear infinite;
-}
-/* Pausa a animação quando o mouse passa por cima do container */
-.marquee-wrapper:hover .marquee-inner {
-  animation-play-state: paused;
-}
-@keyframes marqueeScroll {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
