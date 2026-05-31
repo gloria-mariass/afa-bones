@@ -18,7 +18,7 @@
         <div class="flex-shrink-0 w-[85%] sm:w-[350px] md:w-auto snap-center bg-pure-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden flex flex-col hover:shadow-xl transition-shadow duration-300">
             <img src="${item.imagem}" alt="${item.titulo}" class="w-full h-64 object-cover bg-gray-200" loading="lazy">
             <div class="p-6 flex flex-col flex-grow">
-                <h3 class="text-2xl font-bold text-industrial-black mb-4">${item.titulo}</h3>
+                <h3 class="text-2xl font-semibold text-industrial-black mb-4">${item.titulo}</h3>
                 
                 <div class="flex flex-wrap gap-2 mb-8">
                     ${tagsHtml}

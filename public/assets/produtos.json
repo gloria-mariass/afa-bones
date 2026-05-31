@@ -27,6 +27,6 @@
         "titulo": "Boné Esportivo",
         "quantidade_minima": 30,
         "imagem": "src/img/bone.jpg",
-        "beneficios": ["Secagem Rápida", "Respirável", "Ajuste Perfeito"]
+        "beneficios": ["Secagem Rápida", "Respirável", "Leve"]
     }
 ]
